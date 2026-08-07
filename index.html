@@ -5,13 +5,13 @@
 <title>Hunter App Studio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Libre+Franklin:wght@400;500;600&display=swap">
+
 <style>
   body { margin: 0; }
   ::selection { background: rgba(138,106,74,0.25); }
   a { color: #8a6a4a; text-decoration: none; transition: color 0.2s ease; }
   a:hover { color: #5f4830; }
 
-  /* Nav link underline sweep */
   .nav-link { position: relative; }
   .nav-link::after {
     content: ""; position: absolute; left: 0; bottom: -3px; height: 1px; width: 0;
@@ -19,15 +19,15 @@
   }
   .nav-link:hover::after, .nav-link.active::after { width: 100%; }
 
-  /* CTA button lift */
   .cta-btn { transition: transform 0.2s ease, box-shadow 0.2s ease; display: inline-block; }
   .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(32,32,29,0.18); }
 
-  /* Screenshot frame hover */
   .phone-frame { transition: transform 0.35s ease; }
   .phone-frame:hover { transform: translateY(-4px); }
 
-  /* Scroll reveal */
+  .app-card { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+  .app-card:hover { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(32,32,29,0.10); }
+
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
   .reveal.in-view { opacity: 1; transform: translateY(0); }
 
@@ -36,18 +36,19 @@
     .reveal { opacity: 1; transform: none; }
   }
 </style>
+
 </head>
 <body>
 <div id="top" style="background:#fbf8f2;color:#20201d;font-family:'Libre Franklin',sans-serif;line-height:1.6;">
 
-  <!-- NAV -->
   <div style="position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:28px;padding:18px 40px;background:rgba(251,248,242,0.92);backdrop-filter:blur(6px);border-bottom:1px solid rgba(32,32,29,0.1);">
-    <a href="#top" style="font-family:'Fraunces',serif;font-weight:600;font-size:17px;letter-spacing:0.01em;margin-right:auto;text-transform:uppercase;color:#20201d;">Hunter App Studio</a>
-    <a href="#kaizen" class="nav-link" data-section="kaizen" style="font-size:13px;letter-spacing:0.03em;color:#a8351f;">Kaizen</a>
-    <a href="#chameleon" class="nav-link" data-section="chameleon" style="font-size:13px;letter-spacing:0.03em;color:#3f8f5c;">Countdown Chameleon</a>
-    <a href="#waypoints" class="nav-link" data-section="waypoints" style="font-size:13px;letter-spacing:0.03em;color:#2c5f66;">Waypoints</a>
-    <a href="#contact" style="font-family:'Fraunces',serif;font-style:italic;font-size:14px;color:#20201d;border-bottom:1px solid #20201d;padding-bottom:2px;">Say hi</a>
+    <a href="index.html" style="font-family:'Fraunces',serif;font-weight:600;font-size:17px;letter-spacing:0.01em;margin-right:auto;text-transform:uppercase;color:#20201d;">Hunter App Studio</a>
+    <a href="kaizen.html" class="nav-link" style="font-size:13px;letter-spacing:0.03em;color:#a8351f;">Kaizen</a>
+    <a href="chameleon.html" class="nav-link" style="font-size:13px;letter-spacing:0.03em;color:#3f8f5c;">Countdown Chameleon</a>
+    <a href="waypoints.html" class="nav-link" style="font-size:13px;letter-spacing:0.03em;color:#2c5f66;">Waypoints</a>
+    <a href="index.html#contact" style="font-family:'Fraunces',serif;font-style:italic;font-size:14px;color:#20201d;border-bottom:1px solid #20201d;padding-bottom:2px;">Say hi</a>
   </div>
+
 
   <!-- HERO -->
   <div style="padding:80px 40px 64px;max-width:1180px;margin:0 auto;">
@@ -55,92 +56,52 @@
     <h1 style="font-family:'Fraunces',serif;font-weight:600;font-size:clamp(38px,5vw,60px);line-height:1.08;max-width:820px;margin:0 0 20px;">Small apps, made deliberately.</h1>
     <p style="font-size:18px;max-width:620px;color:rgba(32,32,29,0.75);margin:0 0 30px;">A training log, a set of countdowns, a shared travel map — built for the little escapes and big memories along the way.</p>
     <div style="display:flex;gap:20px;flex-wrap:wrap;align-items:center;">
-      <a href="#kaizen" class="cta-btn" style="font-family:'Fraunces',serif;font-weight:600;font-size:15px;background:#20201d;color:#fbf8f2;padding:13px 28px;">Explore the apps</a>
+      <a href="#apps" class="cta-btn" style="font-family:'Fraunces',serif;font-weight:600;font-size:15px;background:#20201d;color:#fbf8f2;padding:13px 28px;">Explore the apps</a>
       <a href="#contact" style="font-family:'Fraunces',serif;font-style:italic;font-size:15px;border-bottom:1px solid #20201d;padding-bottom:2px;">Get in touch →</a>
     </div>
   </div>
 
-  <!-- APP 1: KAIZEN -->
-  <div id="kaizen" class="reveal" style="scroll-margin-top:80px;border-top:1px solid rgba(32,32,29,0.1);">
-    <div style="max-width:1180px;margin:0 auto;padding:72px 40px;display:flex;align-items:center;gap:70px;flex-wrap:wrap;">
-      <div style="flex:1 1 400px;min-width:300px;">
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
-          <img src="assets/kaizen-icon.png" alt="Kaizen Aikido Tracker icon" style="width:48px;height:48px;object-fit:cover;flex:none;">
-          <div style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#8a6a4a;">Training tracker · No. 01</div>
-        </div>
-        <h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:36px;margin:0 0 8px;color:#a8351f;">Kaizen Aikido Tracker</h2>
-        <div style="font-family:'Fraunces',serif;font-style:italic;font-size:18px;color:#8a6a4a;margin-bottom:18px;">Track every stripe, every session, every step toward shodan.</div>
-        <p style="font-size:15px;color:rgba(32,32,29,0.75);max-width:480px;margin-bottom:26px;">Log the techniques you drilled, watch your kyu/dan progression build over time, and keep a streak going one mat session at a time. Separate tabs for classes, rank, promotions, techniques, seminars, and notes keep everything organized, with a built-in glossary for terms still sinking in — and a share/print report when you want to show your progress to someone else.</p>
-        <div style="display:flex;flex-direction:column;gap:9px;margin-bottom:28px;font-size:14px;">
-          <div>— Belt, kyu &amp; dan progression map</div>
-          <div>— Technique library with reps logged</div>
-          <div>— Practice streaks &amp; session notes</div>
-          <div>— Shareable &amp; printable progress reports</div>
-        </div>
-        <a href="#contact" class="cta-btn" style="font-family:'Fraunces',serif;font-weight:600;font-size:15px;background:#20201d;color:#fbf8f2;padding:13px 28px;display:inline-block;">Start your training log</a>
+  <!-- APP PREVIEWS -->
+  <div id="apps" style="scroll-margin-top:80px;border-top:1px solid rgba(32,32,29,0.1);padding:64px 40px 88px;">
+    <div style="max-width:1180px;margin:0 auto;">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;">
+        
+    <a href="kaizen.html" class="app-card reveal" style="display:block;background:#ffffff;border:1px solid rgba(32,32,29,0.08);border-radius:14px;padding:32px;text-decoration:none;color:inherit;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px;">
+        <img src="assets/kaizen-icon.png" alt="Kaizen Aikido Tracker icon" style="width:44px;height:44px;object-fit:cover;flex:none;border-radius:8px;">
+        <div style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#8a6a4a;">Training tracker</div>
       </div>
-      <div style="flex:1 1 300px;min-width:260px;display:flex;justify-content:center;">
-        <div class="phone-frame" style="width:260px;padding:14px 14px 22px;background:#20201d;">
-          <div style="width:56px;height:4px;background:#5a5850;margin:0 auto 10px;"></div>
-          <img src="assets/kaizen-screenshot.png" alt="Kaizen Aikido Tracker screenshot" style="width:100%;height:420px;object-fit:cover;object-position:top;display:block;">
-        </div>
+      <h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:26px;margin:0 0 6px;color:#a8351f;">Kaizen Aikido Tracker</h2>
+      <div style="font-family:'Fraunces',serif;font-style:italic;font-size:15px;color:#8a6a4a;margin-bottom:14px;">Built for the United States Aikido Federation community.</div>
+      <p style="font-size:14px;color:rgba(32,32,29,0.7);margin:0 0 18px;">Kaizen Aikido Tracker puts your entire training record in your pocket. From your first class to your black belt exam — every practice day, technique, and promotion, right at your fingertips.</p>
+      <span style="font-family:'Fraunces',serif;font-weight:600;font-size:14px;color:#20201d;border-bottom:1px solid #20201d;padding-bottom:2px;">Learn more →</span>
+    </a>
+        
+    <a href="chameleon.html" class="app-card reveal" style="display:block;background:#ffffff;border:1px solid rgba(32,32,29,0.08);border-radius:14px;padding:32px;text-decoration:none;color:inherit;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px;">
+        <img src="assets/chameleon-icon.png" alt="Countdown Chameleon icon" style="width:44px;height:44px;object-fit:cover;flex:none;border-radius:8px;">
+        <div style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#8a6a4a;">Countdown timers</div>
       </div>
-    </div>
-  </div>
-
-  <!-- APP 2: COUNTDOWN CHAMELEON -->
-  <div id="chameleon" class="reveal" style="scroll-margin-top:80px;border-top:1px solid rgba(32,32,29,0.1);background:#f3efe6;">
-    <div style="max-width:1180px;margin:0 auto;padding:72px 40px;display:flex;align-items:center;gap:70px;flex-wrap:wrap-reverse;">
-      <div style="flex:1 1 300px;min-width:260px;display:flex;justify-content:center;">
-        <div class="phone-frame" style="width:260px;padding:14px 14px 22px;background:#20201d;">
-          <div style="width:56px;height:4px;background:#5a5850;margin:0 auto 10px;"></div>
-          <img src="assets/chameleon-screenshot.png" alt="Countdown Chameleon screenshot" style="width:100%;height:420px;object-fit:cover;display:block;">
-        </div>
+      <h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:26px;margin:0 0 6px;color:#3f8f5c;">Countdown Chameleon</h2>
+      <div style="font-family:'Fraunces',serif;font-style:italic;font-size:15px;color:#8a6a4a;margin-bottom:14px;">The countdown app that matches the moment.</div>
+      <p style="font-size:14px;color:rgba(32,32,29,0.7);margin:0 0 18px;">14 beautifully themed countdown timers for weddings, birthdays, game day, and everything in between.</p>
+      <span style="font-family:'Fraunces',serif;font-weight:600;font-size:14px;color:#20201d;border-bottom:1px solid #20201d;padding-bottom:2px;">Learn more →</span>
+    </a>
+        
+    <a href="waypoints.html" class="app-card reveal" style="display:block;background:#ffffff;border:1px solid rgba(32,32,29,0.08);border-radius:14px;padding:32px;text-decoration:none;color:inherit;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px;">
+        <img src="assets/waypoints-icon.png" alt="Waypoints icon" style="width:44px;height:44px;object-fit:cover;flex:none;border-radius:8px;">
+        <div style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#8a6a4a;">Travel tracker</div>
       </div>
-      <div style="flex:1 1 400px;min-width:300px;">
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
-          <img src="assets/chameleon-icon.png" alt="Countdown Chameleon icon" style="width:48px;height:48px;object-fit:cover;flex:none;">
-          <div style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#8a6a4a;">Countdown timers · No. 02</div>
-        </div>
-        <h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:36px;margin:0 0 8px;color:#3f8f5c;">Countdown Chameleon</h2>
-        <div style="font-family:'Fraunces',serif;font-style:italic;font-size:18px;color:#8a6a4a;margin-bottom:18px;">14 themed countdowns for every kind of wait.</div>
-        <p style="font-size:15px;color:rgba(32,32,29,0.75);max-width:480px;margin-bottom:26px;">Whether you're counting down to a trip, a release date, or just the weekend, pick a theme that matches the occasion and watch it change color and character as the day gets closer. Share any countdown with a link, or save it as an image to post or send along.</p>
-        <div style="display:flex;flex-direction:column;gap:9px;margin-bottom:28px;font-size:14px;">
-          <div>— 14 distinct visual themes</div>
-          <div>— Unlimited custom countdown events</div>
-          <div>— Shareable countdown cards</div>
-        </div>
-        <a href="#contact" class="cta-btn" style="font-family:'Fraunces',serif;font-weight:600;font-size:15px;background:#20201d;color:#fbf8f2;padding:13px 28px;display:inline-block;">Pick a theme</a>
+      <h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:26px;margin:0 0 6px;color:#2c5f66;">Waypoints</h2>
+      <div style="font-family:'Fraunces',serif;font-style:italic;font-size:15px;color:#8a6a4a;margin-bottom:14px;">Places we've found, places we're chasing.</div>
+      <p style="font-size:14px;color:rgba(32,32,29,0.7);margin:0 0 18px;">A shared travel log built for two — save the spots you want to visit, rate the ones you've been to, and always know what's next.</p>
+      <span style="font-family:'Fraunces',serif;font-weight:600;font-size:14px;color:#20201d;border-bottom:1px solid #20201d;padding-bottom:2px;">Learn more →</span>
+    </a>
       </div>
     </div>
   </div>
 
-  <!-- APP 3: WAYPOINTS -->
-  <div id="waypoints" class="reveal" style="scroll-margin-top:80px;border-top:1px solid rgba(32,32,29,0.1);">
-    <div style="max-width:1180px;margin:0 auto;padding:72px 40px;display:flex;align-items:center;gap:70px;flex-wrap:wrap;">
-      <div style="flex:1 1 400px;min-width:300px;">
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
-          <img src="assets/waypoints-icon.png" alt="Waypoints icon" style="width:48px;height:48px;object-fit:cover;flex:none;">
-          <div style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#8a6a4a;">Travel tracker · No. 03</div>
-        </div>
-        <h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:36px;margin:0 0 8px;color:#2c5f66;">Waypoints</h2>
-        <div style="font-family:'Fraunces',serif;font-style:italic;font-size:18px;color:#8a6a4a;margin-bottom:18px;">Every place you've been, every place you're going — together.</div>
-        <p style="font-size:15px;color:rgba(32,32,29,0.75);max-width:480px;margin-bottom:26px;">Save the spots you want to visit and the ones you've already loved, rate them with stars and dollar signs, and share the whole map with the people you travel with — updates sync in real time, so everyone's always looking at the same list, whether you're adding a find from the road or planning six months out.</p>
-        <div style="display:flex;flex-direction:column;gap:9px;margin-bottom:28px;font-size:14px;">
-          <div>— Star &amp; price ratings for every spot</div>
-          <div>— Shared interactive map</div>
-          <div>— Been-there &amp; want-to-go lists</div>
-        </div>
-        <a href="#contact" class="cta-btn" style="font-family:'Fraunces',serif;font-weight:600;font-size:15px;background:#20201d;color:#fbf8f2;padding:13px 28px;display:inline-block;">Map your first trip</a>
-      </div>
-      <div style="flex:1 1 300px;min-width:260px;display:flex;justify-content:center;">
-        <div class="phone-frame" style="width:260px;padding:14px 14px 22px;background:#20201d;">
-          <div style="width:56px;height:4px;background:#5a5850;margin:0 auto 10px;"></div>
-          <img src="assets/waypoints-screenshot.png" alt="Waypoints screenshot" style="width:100%;height:420px;object-fit:cover;object-position:top;display:block;">
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- FOOTER -->
   <div id="contact" style="scroll-margin-top:80px;background:rgba(128,128,128,0.3);color:#20201d;padding:64px 40px 36px;">
@@ -150,15 +111,15 @@
           <a href="https://youtube.com/@onthehuntforfuntv?si=lvy2_Nqyj2m5m-uP" target="_blank" rel="noopener">
             <img src="assets/hunt-for-fun-logo-transparent.png" alt="On the Hunt for Fun! logo" style="width: 379px; max-width: 100%; margin-bottom: 14px; height: 140px">
           </a>
-          <h3 style="font-family: 'Fraunces',serif; font-weight: 600; font-size: 26px; margin: 0 0 12px; width: 423px; height: 35px; color: #c0532e">Apps from On the Hunt for Fun!</h3>
+          <h3 style="font-family: 'Fraunces',serif; font-weight: 600; font-size: 26px; margin: 0 0 12px; color: #c0532e">Apps from On the Hunt for Fun!</h3>
           <p style="font-size:14px;color:rgba(251,248,242,0.7);margin:0;"><b style="color: #20201D">On the Hunt for Fun! is a travel YouTube channel — these apps grew out of the same restlessness: a training log, a countdown that felt fun to look at, a map I could share with the people I travel with. Happy to hear what you think.</b></p>
         </div>
-        <div style="display: flex; flex-direction: column; gap: 9px; width: 272px; height: 293px">
-          <a href="mailto:hunterappstudio@gmail.com" style="color: #20201d; font-size: 14px;"><b style="width: 213px; height: 49px">Contact us: hunterappstudio@gmail.com</b></a>
+        <div style="display: flex; flex-direction: column; gap: 9px;">
+          <a href="mailto:hunterappstudio@gmail.com" style="color: #20201d; font-size: 14px;"><b>Contact us: hunterappstudio@gmail.com</b></a>
           <a href="https://youtube.com/@onthehuntforfuntv?si=lvy2_Nqyj2m5m-uP" target="_blank" rel="noopener" style="color: #20201d; font-size: 14px;"><b>YouTube: @onthehuntforfuntv</b></a>
-          <a href="#kaizen" style="color: rgb(168, 53, 31); opacity: 0.9; font-size: 14px;"><b>Kaizen Aikido Tracker</b></a>
-          <a href="#chameleon" style="color: rgb(63, 143, 92); opacity: 0.9; font-size: 14px;"><b>Countdown Chameleon</b></a>
-          <a href="#waypoints" style="color: rgb(44, 95, 102); opacity: 0.9; font-size: 14px;"><b>Waypoints</b></a>
+          <a href="kaizen.html" style="color: rgb(168, 53, 31); opacity: 0.9; font-size: 14px;"><b>Kaizen Aikido Tracker</b></a>
+          <a href="chameleon.html" style="color: rgb(63, 143, 92); opacity: 0.9; font-size: 14px;"><b>Countdown Chameleon</b></a>
+          <a href="waypoints.html" style="color: rgb(44, 95, 102); opacity: 0.9; font-size: 14px;"><b>Waypoints</b></a>
         </div>
       </div>
       <div style="border-top: 1px solid rgba(32,32,29,0.2); padding-top: 20px; font-size: 12px; opacity: 0.6; font-style: normal">© <span id="year">2026</span> Hunter App Studio and On the Hunt for Fun!. Made independently.</div>
@@ -168,11 +129,9 @@
 </div>
 
 <script>
-  // Auto-update footer year
   var yearEl = document.getElementById('year');
   if (yearEl) { yearEl.textContent = new Date().getFullYear(); }
 
-  // Scroll reveal for app sections
   var revealEls = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window && revealEls.length) {
     var revealObserver = new IntersectionObserver(function(entries) {
@@ -187,24 +146,7 @@
   } else {
     revealEls.forEach(function(el) { el.classList.add('in-view'); });
   }
-
-  // Highlight the nav link for the section currently in view
-  var navLinks = document.querySelectorAll('.nav-link');
-  var sections = ['kaizen', 'chameleon', 'waypoints']
-    .map(function(id) { return document.getElementById(id); })
-    .filter(Boolean);
-  if ('IntersectionObserver' in window && sections.length) {
-    var navObserver = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          navLinks.forEach(function(link) {
-            link.classList.toggle('active', link.dataset.section === entry.target.id);
-          });
-        }
-      });
-    }, { threshold: 0.5 });
-    sections.forEach(function(sec) { navObserver.observe(sec); });
-  }
 </script>
+
 </body>
 </html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Kaizen Aikido Tracker — Hunter App Studio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Libre+Franklin:wght@400;500;600&display=swap">
+
+<style>
+  body { margin: 0; }
+  ::selection { background: rgba(138,106,74,0.25); }
+  a { color: #8a6a4a; text-decoration: none; transition: color 0.2s ease; }
+  a:hover { color: #5f4830; }
+
+  .nav-link { position: relative; }
+  .nav-link::after {
+    content: ""; position: absolute; left: 0; bottom: -3px; height: 1px; width: 0;
+    background: currentColor; transition: width 0.25s ease;
+  }
+  .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+
+  .cta-btn { transition: transform 0.2s ease, box-shadow 0.2s ease; display: inline-block; }
+  .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(32,32,29,0.18); }
+
+  .phone-frame { transition: transform 0.35s ease; }
+  .phone-frame:hover { transform: translateY(-4px); }
+
+  .app-card { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+  .app-card:hover { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(32,32,29,0.10); }
+
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.in-view { opacity: 1; transform: translateY(0); }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+    .reveal { opacity: 1; transform: none; }
+  }
+</style>
+
+</head>
+<body>
+<div id="top" style="background:#fbf8f2;color:#20201d;font-family:'Libre Franklin',sans-serif;line-height:1.6;">
+
+  <div style="position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:28px;padding:18px 40px;background:rgba(251,248,242,0.92);backdrop-filter:blur(6px);border-bottom:1px solid rgba(32,32,29,0.1);">
+    <a href="index.html" style="font-family:'Fraunces',serif;font-weight:600;font-size:17px;letter-spacing:0.01em;margin-right:auto;text-transform:uppercase;color:#20201d;">Hunter App Studio</a>
+    <a href="kaizen.html" class="nav-link active" style="font-size:13px;letter-spacing:0.03em;color:#a8351f;">Kaizen</a>
+    <a href="chameleon.html" class="nav-link" style="font-size:13px;letter-spacing:0.03em;color:#3f8f5c;">Countdown Chameleon</a>
+    <a href="waypoints.html" class="nav-link" style="font-size:13px;letter-spacing:0.03em;color:#2c5f66;">Waypoints</a>
+    <a href="index.html#contact" style="font-family:'Fraunces',serif;font-style:italic;font-size:14px;color:#20201d;border-bottom:1px solid #20201d;padding-bottom:2px;">Say hi</a>
+  </div>
+
+
+  <div class="reveal" style="padding:64px 40px 30px;">
+    <div style="max-width:1180px;margin:0 auto;display:flex;align-items:center;gap:70px;flex-wrap:wrap;">
+
+      <div style="flex:1 1 400px;min-width:300px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
+          <img src="assets/kaizen-icon.png" alt="Kaizen Aikido Tracker icon" style="width:48px;height:48px;object-fit:cover;flex:none;">
+          <div style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#8a6a4a;">Training tracker</div>
+        </div>
+        <h1 style="font-family:'Fraunces',serif;font-weight:600;font-size:40px;margin:0 0 8px;color:#a8351f;">Kaizen Aikido Tracker</h1>
+        <div style="font-family:'Fraunces',serif;font-style:italic;font-size:18px;color:#8a6a4a;margin-bottom:18px;">Your complete aikido training journal — built by a practitioner, for practitioners.</div>
+        <p style="font-size:15px;color:rgba(32,32,29,0.75);max-width:480px;margin-bottom:26px;">改善 — continuous improvement. That's the philosophy behind Kaizen Aikido Tracker, the app designed specifically for United States Aikido Federation students and instructors. Whether you're working toward your first kyu test or your black belt exam, every class logged, every technique checked off, and every promotion recorded honors the tradition of kaizen — always growing, never finished.</p>
+        <div style="display:inline-block;font-family:'Fraunces',serif;font-weight:600;font-size:15px;background:#f3efe6;color:#20201d;padding:13px 28px;border:1px solid rgba(32,32,29,0.15);">Coming soon to the Apple App Store</div>
+      </div>
+
+      <div style="flex:1 1 300px;min-width:260px;display:flex;justify-content:center;">
+        <div class="phone-frame" style="width:280px;padding:14px 14px 22px;background:#20201d;">
+          <div style="width:56px;height:4px;background:#5a5850;margin:0 auto 10px;"></div>
+          <img src="assets/kaizen-screenshot.png" alt="Kaizen Aikido Tracker screenshot" style="width:100%;height:460px;object-fit:cover;object-position:top;display:block;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="reveal" style="padding:20px 40px 70px;background:#f3efe6;">
+    <div style="max-width:1180px;margin:0 auto;">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:36px;">
+
+        <div>
+          <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:19px;margin:0 0 8px;color:#a8351f;">Track Every Class</h3>
+          <p style="font-size:14px;color:rgba(32,32,29,0.75);margin:0;">Log each training session with date, instructor, duration, and focus techniques. Your full class history — organized by rank, sorted by date, and always at your fingertips.</p>
+        </div>
+
+        <div>
+          <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:19px;margin:0 0 8px;color:#a8351f;">Monitor Your Rank Progress</h3>
+          <p style="font-size:14px;color:rgba(32,32,29,0.75);margin:0;">From Beginner through Yondan, Kaizen tracks your progress against official USAF test requirements. See exactly how many practice days you've logged and which techniques you still need to master before your next exam.</p>
+        </div>
+
+        <div>
+          <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:19px;margin:0 0 8px;color:#a8351f;">Record Your Promotions</h3>
+          <p style="font-size:14px;color:rgba(32,32,29,0.75);margin:0;">Every rank you earn is a milestone worth remembering. Log the date, location, and examiner for each promotion — building a permanent record of your aikido journey from your first test to black belt and beyond.</p>
+        </div>
+
+        <div>
+          <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:19px;margin:0 0 8px;color:#a8351f;">Grow Through the Techniques</h3>
+          <p style="font-size:14px;color:rgba(32,32,29,0.75);margin:0;">A complete checklist of aikido techniques organized by category — pins, throws, weapons, freestyle, and more. Track your progress, add personal notes, and embrace the journey — because every technique is a lesson still unfolding.</p>
+        </div>
+
+        <div>
+          <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:19px;margin:0 0 8px;color:#a8351f;">Log Your Seminars</h3>
+          <p style="font-size:14px;color:rgba(32,32,29,0.75);margin:0;">Seminars are a key part of USAF advancement. Track every event you attend — instructor, location, duration, and takeaways — all in one place.</p>
+        </div>
+
+        <div>
+          <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:19px;margin:0 0 8px;color:#a8351f;">Built-in Glossary</h3>
+          <p style="font-size:14px;color:rgba(32,32,29,0.75);margin:0;">New to the terminology? The full USAF official nomenclature is built right in — 46 terms with clear definitions, searchable and always available, even offline.</p>
+        </div>
+
+        <div>
+          <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:19px;margin:0 0 8px;color:#a8351f;">Share With Your Sensei</h3>
+          <p style="font-size:14px;color:rgba(32,32,29,0.75);margin:0;">Generate a full progress report — including class dates by rank, techniques learned, and promotion history — and export it as a PDF or share it instantly with your instructor.</p>
+        </div>
+
+        <div>
+          <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:19px;margin:0 0 8px;color:#a8351f;">Your Data, Your Device</h3>
+          <p style="font-size:14px;color:rgba(32,32,29,0.75);margin:0;">Kaizen Aikido Tracker works completely offline. Your training data stays on your device, private and secure. Export a backup anytime to keep your records safe.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="reveal" style="padding:40px 40px 20px;text-align:center;">
+    <div style="font-family:'Fraunces',serif;font-style:italic;font-size:16px;color:#a8351f;">Kaizen Aikido Tracker — Train. Track. Improve.</div>
+  </div>
+
+  <div style="max-width:1180px;margin:20px auto 60px;padding:0 40px;">
+    <a href="index.html" style="font-size:13px;">← Back to all apps</a>
+  </div>
+
+  <!-- FOOTER -->
+  <div id="contact" style="scroll-margin-top:80px;background:rgba(128,128,128,0.3);color:#20201d;padding:64px 40px 36px;">
+    <div style="max-width:1180px;margin:0 auto;">
+      <div style="display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;margin-bottom:36px;">
+        <div style="max-width:480px;">
+          <a href="https://youtube.com/@onthehuntforfuntv?si=lvy2_Nqyj2m5m-uP" target="_blank" rel="noopener">
+            <img src="assets/hunt-for-fun-logo-transparent.png" alt="On the Hunt for Fun! logo" style="width: 379px; max-width: 100%; margin-bottom: 14px; height: 140px">
+          </a>
+          <h3 style="font-family: 'Fraunces',serif; font-weight: 600; font-size: 26px; margin: 0 0 12px; color: #c0532e">Apps from On the Hunt for Fun!</h3>
+          <p style="font-size:14px;color:rgba(251,248,242,0.7);margin:0;"><b style="color: #20201D">On the Hunt for Fun! is a travel YouTube channel — these apps grew out of the same restlessness: a training log, a countdown that felt fun to look at, a map I could share with the people I travel with. Happy to hear what you think.</b></p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 9px;">
+          <a href="mailto:hunterappstudio@gmail.com" style="color: #20201d; font-size: 14px;"><b>Contact us: hunterappstudio@gmail.com</b></a>
+          <a href="https://youtube.com/@onthehuntforfuntv?si=lvy2_Nqyj2m5m-uP" target="_blank" rel="noopener" style="color: #20201d; font-size: 14px;"><b>YouTube: @onthehuntforfuntv</b></a>
+          <a href="kaizen.html" style="color: rgb(168, 53, 31); opacity: 0.9; font-size: 14px;"><b>Kaizen Aikido Tracker</b></a>
+          <a href="chameleon.html" style="color: rgb(63, 143, 92); opacity: 0.9; font-size: 14px;"><b>Countdown Chameleon</b></a>
+          <a href="waypoints.html" style="color: rgb(44, 95, 102); opacity: 0.9; font-size: 14px;"><b>Waypoints</b></a>
+        </div>
+      </div>
+      <div style="border-top: 1px solid rgba(32,32,29,0.2); padding-top: 20px; font-size: 12px; opacity: 0.6; font-style: normal">© <span id="year">2026</span> Hunter App Studio and On the Hunt for Fun!. Made independently.</div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  var yearEl = document.getElementById('year');
+  if (yearEl) { yearEl.textContent = new Date().getFullYear(); }
+
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && revealEls.length) {
+    var revealObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(function(el) { revealObserver.observe(el); });
+  } else {
+    revealEls.forEach(function(el) { el.classList.add('in-view'); });
+  }
+</script>
+
+</body>
+</html>

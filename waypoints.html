@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Waypoints — Hunter App Studio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Libre+Franklin:wght@400;500;600&display=swap">
+
+<style>
+  body { margin: 0; }
+  ::selection { background: rgba(138,106,74,0.25); }
+  a { color: #8a6a4a; text-decoration: none; transition: color 0.2s ease; }
+  a:hover { color: #5f4830; }
+
+  .nav-link { position: relative; }
+  .nav-link::after {
+    content: ""; position: absolute; left: 0; bottom: -3px; height: 1px; width: 0;
+    background: currentColor; transition: width 0.25s ease;
+  }
+  .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+
+  .cta-btn { transition: transform 0.2s ease, box-shadow 0.2s ease; display: inline-block; }
+  .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(32,32,29,0.18); }
+
+  .phone-frame { transition: transform 0.35s ease; }
+  .phone-frame:hover { transform: translateY(-4px); }
+
+  .app-card { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+  .app-card:hover { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(32,32,29,0.10); }
+
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.in-view { opacity: 1; transform: translateY(0); }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+    .reveal { opacity: 1; transform: none; }
+  }
+</style>
+
+</head>
+<body>
+<div id="top" style="background:#fbf8f2;color:#20201d;font-family:'Libre Franklin',sans-serif;line-height:1.6;">
+
+  <div style="position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:28px;padding:18px 40px;background:rgba(251,248,242,0.92);backdrop-filter:blur(6px);border-bottom:1px solid rgba(32,32,29,0.1);">
+    <a href="index.html" style="font-family:'Fraunces',serif;font-weight:600;font-size:17px;letter-spacing:0.01em;margin-right:auto;text-transform:uppercase;color:#20201d;">Hunter App Studio</a>
+    <a href="kaizen.html" class="nav-link" style="font-size:13px;letter-spacing:0.03em;color:#a8351f;">Kaizen</a>
+    <a href="chameleon.html" class="nav-link" style="font-size:13px;letter-spacing:0.03em;color:#3f8f5c;">Countdown Chameleon</a>
+    <a href="waypoints.html" class="nav-link active" style="font-size:13px;letter-spacing:0.03em;color:#2c5f66;">Waypoints</a>
+    <a href="index.html#contact" style="font-family:'Fraunces',serif;font-style:italic;font-size:14px;color:#20201d;border-bottom:1px solid #20201d;padding-bottom:2px;">Say hi</a>
+  </div>
+
+
+  <div class="reveal" style="padding:64px 40px 30px;">
+    <div style="max-width:1180px;margin:0 auto;display:flex;align-items:center;gap:70px;flex-wrap:wrap;">
+
+      <div style="flex:1 1 400px;min-width:300px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
+          <img src="assets/waypoints-icon.png" alt="Waypoints icon" style="width:48px;height:48px;object-fit:cover;flex:none;">
+          <div style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#8a6a4a;">Travel tracker</div>
+        </div>
+        <h1 style="font-family:'Fraunces',serif;font-weight:600;font-size:40px;margin:0 0 8px;color:#2c5f66;">Waypoints</h1>
+        <div style="font-family:'Fraunces',serif;font-style:italic;font-size:18px;color:#8a6a4a;margin-bottom:18px;">One list, every traveler.</div>
+        <p style="font-size:15px;color:rgba(32,32,29,0.75);max-width:480px;margin-bottom:26px;">Every trip starts with a list — a restaurant you don't want to miss, a coffee shop a friend swore by, a hotel you're still deciding on. Waypoints turns that scattered list into one shared, living log. Built for you and whoever you're traveling with, it's the place where "we should go there" turns into "we did."</p>
+        <div style="display:inline-block;font-family:'Fraunces',serif;font-weight:600;font-size:15px;background:#f3efe6;color:#20201d;padding:13px 28px;border:1px solid rgba(32,32,29,0.15);">Currently in beta testing — the next trip is a great time to try it out</div>
+      </div>
+
+      <div style="flex:1 1 300px;min-width:260px;display:flex;justify-content:center;">
+        <div class="phone-frame" style="width:280px;padding:14px 14px 22px;background:#20201d;">
+          <div style="width:56px;height:4px;background:#5a5850;margin:0 auto 10px;"></div>
+          <img src="assets/waypoints-screenshot.png" alt="Waypoints screenshot" style="width:100%;height:460px;object-fit:cover;object-position:top;display:block;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="reveal" style="padding:20px 40px 70px;background:#f3efe6;">
+    <div style="max-width:1180px;margin:0 auto;">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:36px;">
+
+        <div>
+          <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:19px;margin:0 0 8px;color:#2c5f66;">Organized By City, Automatically</h3>
+          <p style="font-size:14px;color:rgba(32,32,29,0.75);margin:0;">Add a place and Waypoints sorts it — grouped under its own postcard-style city banner, alphabetized, with a live weather check-in right on the header. Scroll city by city, or view every trip at once.</p>
+        </div>
+
+        <div>
+          <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:19px;margin:0 0 8px;color:#2c5f66;">Built for Every Traveler</h3>
+          <p style="font-size:14px;color:rgba(32,32,29,0.75);margin:0;">Create a trip, add the people going, and tag who suggested each stop. Multiple trips, one shared list — everyone sees the same places update in real time, from a weekend getaway to a once-a-year international trip.</p>
+        </div>
+
+        <div>
+          <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:19px;margin:0 0 8px;color:#2c5f66;">Rate It, Price It, Remember It</h3>
+          <p style="font-size:14px;color:rgba(32,32,29,0.75);margin:0;">Mark a place Want to Go or Visited, rate it in half-stars, and set a price range from $ to $$$$. Add notes on what to order, what to skip, and what made it worth the stop.</p>
+        </div>
+
+        <div>
+          <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:19px;margin:0 0 8px;color:#2c5f66;">Search Instead of Type</h3>
+          <p style="font-size:14px;color:rgba(32,32,29,0.75);margin:0;">Look up a real restaurant, hotel, or landmark by name and Waypoints fills in the address and city for you — no manual typing, no guessing at spelling.</p>
+        </div>
+
+        <div>
+          <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:19px;margin:0 0 8px;color:#2c5f66;">See It All on the Map</h3>
+          <p style="font-size:14px;color:rgba(32,32,29,0.75);margin:0;">Every place gets a map link, and every city gets its own live map — every saved spot in that city, pinned and ready, so you can see the whole trip at a glance.</p>
+        </div>
+
+        <div>
+          <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:19px;margin:0 0 8px;color:#2c5f66;">Share Any Find</h3>
+          <p style="font-size:14px;color:rgba(32,32,29,0.75);margin:0;">Turn any place into a shareable postcard — photo, rating, price, and all — ready to drop into a text or post with one tap.</p>
+        </div>
+
+        <div>
+          <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:19px;margin:0 0 8px;color:#2c5f66;">Yours, Wherever You Are</h3>
+          <p style="font-size:14px;color:rgba(32,32,29,0.75);margin:0;">Install it right on your phone's home screen like a real app. Every change syncs instantly between everyone on the trip, so the list is always up to date, for everyone, everywhere.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="reveal" style="padding:40px 40px 20px;text-align:center;">
+    <div style="font-family:'Fraunces',serif;font-style:italic;font-size:16px;color:#2c5f66;">Waypoints — Places we've found, places we're chasing.</div>
+  </div>
+
+  <div style="max-width:1180px;margin:20px auto 60px;padding:0 40px;">
+    <a href="index.html" style="font-size:13px;">← Back to all apps</a>
+  </div>
+
+  <!-- FOOTER -->
+  <div id="contact" style="scroll-margin-top:80px;background:rgba(128,128,128,0.3);color:#20201d;padding:64px 40px 36px;">
+    <div style="max-width:1180px;margin:0 auto;">
+      <div style="display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;margin-bottom:36px;">
+        <div style="max-width:480px;">
+          <a href="https://youtube.com/@onthehuntforfuntv?si=lvy2_Nqyj2m5m-uP" target="_blank" rel="noopener">
+            <img src="assets/hunt-for-fun-logo-transparent.png" alt="On the Hunt for Fun! logo" style="width: 379px; max-width: 100%; margin-bottom: 14px; height: 140px">
+          </a>
+          <h3 style="font-family: 'Fraunces',serif; font-weight: 600; font-size: 26px; margin: 0 0 12px; color: #c0532e">Apps from On the Hunt for Fun!</h3>
+          <p style="font-size:14px;color:rgba(251,248,242,0.7);margin:0;"><b style="color: #20201D">On the Hunt for Fun! is a travel YouTube channel — these apps grew out of the same restlessness: a training log, a countdown that felt fun to look at, a map I could share with the people I travel with. Happy to hear what you think.</b></p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 9px;">
+          <a href="mailto:hunterappstudio@gmail.com" style="color: #20201d; font-size: 14px;"><b>Contact us: hunterappstudio@gmail.com</b></a>
+          <a href="https://youtube.com/@onthehuntforfuntv?si=lvy2_Nqyj2m5m-uP" target="_blank" rel="noopener" style="color: #20201d; font-size: 14px;"><b>YouTube: @onthehuntforfuntv</b></a>
+          <a href="kaizen.html" style="color: rgb(168, 53, 31); opacity: 0.9; font-size: 14px;"><b>Kaizen Aikido Tracker</b></a>
+          <a href="chameleon.html" style="color: rgb(63, 143, 92); opacity: 0.9; font-size: 14px;"><b>Countdown Chameleon</b></a>
+          <a href="waypoints.html" style="color: rgb(44, 95, 102); opacity: 0.9; font-size: 14px;"><b>Waypoints</b></a>
+        </div>
+      </div>
+      <div style="border-top: 1px solid rgba(32,32,29,0.2); padding-top: 20px; font-size: 12px; opacity: 0.6; font-style: normal">© <span id="year">2026</span> Hunter App Studio and On the Hunt for Fun!. Made independently.</div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  var yearEl = document.getElementById('year');
+  if (yearEl) { yearEl.textContent = new Date().getFullYear(); }
+
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && revealEls.length) {
+    var revealObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(function(el) { revealObserver.observe(el); });
+  } else {
+    revealEls.forEach(function(el) { el.classList.add('in-view'); });
+  }
+</script>
+
+</body>
+</html>

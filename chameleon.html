@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Countdown Chameleon — Hunter App Studio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Libre+Franklin:wght@400;500;600&display=swap">
+
+<style>
+  body { margin: 0; }
+  ::selection { background: rgba(138,106,74,0.25); }
+  a { color: #8a6a4a; text-decoration: none; transition: color 0.2s ease; }
+  a:hover { color: #5f4830; }
+
+  .nav-link { position: relative; }
+  .nav-link::after {
+    content: ""; position: absolute; left: 0; bottom: -3px; height: 1px; width: 0;
+    background: currentColor; transition: width 0.25s ease;
+  }
+  .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+
+  .cta-btn { transition: transform 0.2s ease, box-shadow 0.2s ease; display: inline-block; }
+  .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(32,32,29,0.18); }
+
+  .phone-frame { transition: transform 0.35s ease; }
+  .phone-frame:hover { transform: translateY(-4px); }
+
+  .app-card { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+  .app-card:hover { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(32,32,29,0.10); }
+
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.in-view { opacity: 1; transform: translateY(0); }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+    .reveal { opacity: 1; transform: none; }
+  }
+</style>
+
+</head>
+<body>
+<div id="top" style="background:#fbf8f2;color:#20201d;font-family:'Libre Franklin',sans-serif;line-height:1.6;">
+
+  <div style="position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:28px;padding:18px 40px;background:rgba(251,248,242,0.92);backdrop-filter:blur(6px);border-bottom:1px solid rgba(32,32,29,0.1);">
+    <a href="index.html" style="font-family:'Fraunces',serif;font-weight:600;font-size:17px;letter-spacing:0.01em;margin-right:auto;text-transform:uppercase;color:#20201d;">Hunter App Studio</a>
+    <a href="kaizen.html" class="nav-link" style="font-size:13px;letter-spacing:0.03em;color:#a8351f;">Kaizen</a>
+    <a href="chameleon.html" class="nav-link active" style="font-size:13px;letter-spacing:0.03em;color:#3f8f5c;">Countdown Chameleon</a>
+    <a href="waypoints.html" class="nav-link" style="font-size:13px;letter-spacing:0.03em;color:#2c5f66;">Waypoints</a>
+    <a href="index.html#contact" style="font-family:'Fraunces',serif;font-style:italic;font-size:14px;color:#20201d;border-bottom:1px solid #20201d;padding-bottom:2px;">Say hi</a>
+  </div>
+
+
+  <div class="reveal" style="padding:64px 40px 30px;">
+    <div style="max-width:1180px;margin:0 auto;display:flex;align-items:center;gap:70px;flex-wrap:wrap;">
+
+      <div style="flex:1 1 300px;min-width:260px;display:flex;justify-content:center;">
+        <div class="phone-frame" style="width:280px;padding:14px 14px 22px;background:#20201d;">
+          <div style="width:56px;height:4px;background:#5a5850;margin:0 auto 10px;"></div>
+          <img src="assets/chameleon-screenshot.png" alt="Countdown Chameleon screenshot" style="width:100%;height:460px;object-fit:cover;object-position:top;display:block;">
+        </div>
+      </div>
+
+      <div style="flex:1 1 400px;min-width:300px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
+          <img src="assets/chameleon-icon.png" alt="Countdown Chameleon icon" style="width:48px;height:48px;object-fit:cover;flex:none;">
+          <div style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#8a6a4a;">Countdown timers</div>
+        </div>
+        <h1 style="font-family:'Fraunces',serif;font-weight:600;font-size:40px;margin:0 0 8px;color:#3f8f5c;">Countdown Chameleon</h1>
+        <div style="font-family:'Fraunces',serif;font-style:italic;font-size:18px;color:#8a6a4a;margin-bottom:18px;">The countdown app that matches the moment.</div>
+        <p style="font-size:15px;color:rgba(32,32,29,0.75);max-width:480px;margin-bottom:26px;">Every big day deserves more than a plain number ticking down. Countdown Chameleon is a fully themed countdown timer app built for the moments that matter — weddings, birthdays, baby's due dates, game day, graduation, and everything in between. With 14 illustrated themes to choose from, your countdown doesn't just track the wait — it captures the anticipation.</p>
+        <div style="display:inline-block;font-family:'Fraunces',serif;font-weight:600;font-size:15px;background:#f3efe6;color:#20201d;padding:13px 28px;border:1px solid rgba(32,32,29,0.15);">Coming soon to the Apple App Store</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="reveal" style="padding:20px 40px 70px;background:#f3efe6;">
+    <div style="max-width:1180px;margin:0 auto;">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:36px;">
+
+        <div>
+          <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:19px;margin:0 0 8px;color:#3f8f5c;">14 Themes, Endless Occasions</h3>
+          <p style="font-size:14px;color:rgba(32,32,29,0.75);margin:0;">From a Jolly Roger flag counting down to your beach trip to a glowing sci-fi HUD for launch day, every theme is fully illustrated and built for a specific kind of moment — Wedding, Birthday, Baby, Football, School, Concert, and more.</p>
+        </div>
+
+        <div>
+          <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:19px;margin:0 0 8px;color:#3f8f5c;">Keep Every Countdown Going</h3>
+          <p style="font-size:14px;color:rgba(32,32,29,0.75);margin:0;">Track up to 30 countdowns at once, each with its own theme, swipeable like a deck of cards. Add team names, venues, school names, or a baby's name to make every countdown feel personal.</p>
+        </div>
+
+        <div>
+          <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:19px;margin:0 0 8px;color:#3f8f5c;">Live, Down to the Second</h3>
+          <p style="font-size:14px;color:rgba(32,32,29,0.75);margin:0;">Every countdown updates in real time — days, hours, minutes, and seconds — so you always know exactly how close the moment is.</p>
+        </div>
+
+        <div>
+          <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:19px;margin:0 0 8px;color:#3f8f5c;">Share the Excitement</h3>
+          <p style="font-size:14px;color:rgba(32,32,29,0.75);margin:0;">Turn any countdown into a beautiful shareable image, or send a link that adds the same countdown straight into a friend's deck. Perfect for wedding parties, family group chats, or hyping up game day together.</p>
+        </div>
+
+        <div>
+          <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:19px;margin:0 0 8px;color:#3f8f5c;">Personalize the Details</h3>
+          <p style="font-size:14px;color:rgba(32,32,29,0.75);margin:0;">Depending on the occasion, add the details that matter — home team and opponent, school event type, gender reveal, venue, passenger name, and more.</p>
+        </div>
+
+        <div>
+          <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:19px;margin:0 0 8px;color:#3f8f5c;">One Price, Everything Included</h3>
+          <p style="font-size:14px;color:rgba(32,32,29,0.75);margin:0;">All 14 themes, no ads, no subscriptions, no in-app purchases. Pay once, own it.</p>
+        </div>
+
+        <div>
+          <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:19px;margin:0 0 8px;color:#3f8f5c;">Your Data, Your Device</h3>
+          <p style="font-size:14px;color:rgba(32,32,29,0.75);margin:0;">Countdown Chameleon works completely offline. Every countdown lives right on your device — no accounts, no tracking. Back up your deck anytime with one tap.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="reveal" style="padding:40px 40px 20px;text-align:center;">
+    <div style="font-family:'Fraunces',serif;font-style:italic;font-size:16px;color:#3f8f5c;">Countdown Chameleon — Every countdown, its own personality.</div>
+  </div>
+
+  <div style="max-width:1180px;margin:20px auto 60px;padding:0 40px;">
+    <a href="index.html" style="font-size:13px;">← Back to all apps</a>
+  </div>
+
+  <!-- FOOTER -->
+  <div id="contact" style="scroll-margin-top:80px;background:rgba(128,128,128,0.3);color:#20201d;padding:64px 40px 36px;">
+    <div style="max-width:1180px;margin:0 auto;">
+      <div style="display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;margin-bottom:36px;">
+        <div style="max-width:480px;">
+          <a href="https://youtube.com/@onthehuntforfuntv?si=lvy2_Nqyj2m5m-uP" target="_blank" rel="noopener">
+            <img src="assets/hunt-for-fun-logo-transparent.png" alt="On the Hunt for Fun! logo" style="width: 379px; max-width: 100%; margin-bottom: 14px; height: 140px">
+          </a>
+          <h3 style="font-family: 'Fraunces',serif; font-weight: 600; font-size: 26px; margin: 0 0 12px; color: #c0532e">Apps from On the Hunt for Fun!</h3>
+          <p style="font-size:14px;color:rgba(251,248,242,0.7);margin:0;"><b style="color: #20201D">On the Hunt for Fun! is a travel YouTube channel — these apps grew out of the same restlessness: a training log, a countdown that felt fun to look at, a map I could share with the people I travel with. Happy to hear what you think.</b></p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 9px;">
+          <a href="mailto:hunterappstudio@gmail.com" style="color: #20201d; font-size: 14px;"><b>Contact us: hunterappstudio@gmail.com</b></a>
+          <a href="https://youtube.com/@onthehuntforfuntv?si=lvy2_Nqyj2m5m-uP" target="_blank" rel="noopener" style="color: #20201d; font-size: 14px;"><b>YouTube: @onthehuntforfuntv</b></a>
+          <a href="kaizen.html" style="color: rgb(168, 53, 31); opacity: 0.9; font-size: 14px;"><b>Kaizen Aikido Tracker</b></a>
+          <a href="chameleon.html" style="color: rgb(63, 143, 92); opacity: 0.9; font-size: 14px;"><b>Countdown Chameleon</b></a>
+          <a href="waypoints.html" style="color: rgb(44, 95, 102); opacity: 0.9; font-size: 14px;"><b>Waypoints</b></a>
+        </div>
+      </div>
+      <div style="border-top: 1px solid rgba(32,32,29,0.2); padding-top: 20px; font-size: 12px; opacity: 0.6; font-style: normal">© <span id="year">2026</span> Hunter App Studio and On the Hunt for Fun!. Made independently.</div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  var yearEl = document.getElementById('year');
+  if (yearEl) { yearEl.textContent = new Date().getFullYear(); }
+
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && revealEls.length) {
+    var revealObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(function(el) { revealObserver.observe(el); });
+  } else {
+    revealEls.forEach(function(el) { el.classList.add('in-view'); });
+  }
+</script>
+
+</body>
+</html>
