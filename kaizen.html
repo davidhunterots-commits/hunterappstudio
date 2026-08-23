@@ -41,11 +41,12 @@
 <body>
 <div id="top" style="background:#fbf8f2;color:#20201d;font-family:'Libre Franklin',sans-serif;line-height:1.6;">
 
-  <div style="position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:28px;padding:18px 40px;background:rgba(251,248,242,0.92);backdrop-filter:blur(6px);border-bottom:1px solid rgba(32,32,29,0.1);">
+  <div style="position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:24px;padding:18px 40px;background:rgba(251,248,242,0.92);backdrop-filter:blur(6px);border-bottom:1px solid rgba(32,32,29,0.1);flex-wrap:wrap;">
     <a href="index.html" style="font-family:'Fraunces',serif;font-weight:600;font-size:17px;letter-spacing:0.01em;margin-right:auto;text-transform:uppercase;color:#20201d;">Hunter App Studio</a>
     <a href="kaizen.html" class="nav-link active" style="font-size:13px;letter-spacing:0.03em;color:#a8351f;">Kaizen</a>
     <a href="chameleon.html" class="nav-link" style="font-size:13px;letter-spacing:0.03em;color:#3f8f5c;">Countdown Chameleon</a>
     <a href="waypoints.html" class="nav-link" style="font-size:13px;letter-spacing:0.03em;color:#2c5f66;">Waypoints</a>
+    <a href="gameday.html" class="nav-link" style="font-size:13px;letter-spacing:0.03em;color:#1f4287;">Gameday Countdown</a>
     <a href="index.html#contact" style="font-family:'Fraunces',serif;font-style:italic;font-size:14px;color:#20201d;border-bottom:1px solid #20201d;padding-bottom:2px;">Say hi</a>
   </div>
 
@@ -60,15 +61,55 @@
         </div>
         <h1 style="font-family:'Fraunces',serif;font-weight:600;font-size:40px;margin:0 0 8px;color:#a8351f;">Kaizen Aikido Tracker</h1>
         <div style="font-family:'Fraunces',serif;font-style:italic;font-size:18px;color:#8a6a4a;margin-bottom:18px;">Your complete aikido training journal, built by a practitioner, for practitioners.</div>
-        <p style="font-size:15px;color:rgba(32,32,29,0.75);max-width:480px;margin-bottom:26px;">改善: continuous improvement. That's the philosophy behind Kaizen Aikido Tracker, the app designed specifically for United States Aikido Federation students and instructors. Whether you're working toward your first kyu test or your black belt exam, every class logged, every technique checked off, and every promotion recorded honors the tradition of kaizen: always growing, never finished.</p>
+        <p style="font-size:15px;color:rgba(32,32,29,0.75);max-width:480px;margin-bottom:26px;">改善: continuous improvement. That's the philosophy behind Kaizen Aikido Tracker, the app designed for aikido students and instructors. Whether you're working toward your first kyu test or your black belt exam, every class logged, every technique checked off, and every promotion recorded honors the tradition of kaizen: always growing, never finished.</p>
         <div style="display:inline-block;font-family:'Fraunces',serif;font-weight:600;font-size:15px;background:#f3efe6;color:#20201d;padding:13px 28px;border:1px solid rgba(32,32,29,0.15);">Coming soon to the Apple App Store</div>
       </div>
 
       <div style="flex:1 1 300px;min-width:260px;display:flex;justify-content:center;">
         <div class="phone-frame" style="width:280px;padding:14px 14px 22px;background:#20201d;">
           <div style="width:56px;height:4px;background:#5a5850;margin:0 auto 10px;"></div>
-          <img src="assets/kaizen-screenshot.png" alt="Kaizen Aikido Tracker screenshot" style="width:100%;height:460px;object-fit:cover;object-position:top;display:block;">
+          <img src="assets/kaizen-gallery/overview.png" alt="Kaizen Aikido Tracker overview screenshot" style="width:100%;height:460px;object-fit:cover;object-position:top;display:block;">
         </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="reveal" style="padding:60px 40px 20px;">
+    <div style="max-width:1180px;margin:0 auto;">
+      <h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:24px;margin:0 0 6px;color:#a8351f;">See it in action</h2>
+      <p style="font-size:14px;color:rgba(32,32,29,0.7);margin:0 0 30px;">A look inside the actual app, from logging a class to tracking rank and technique progress.</p>
+      <div style="display:flex;gap:24px;overflow-x:auto;padding-bottom:12px;-webkit-overflow-scrolling:touch;">
+
+        <div class="phone-frame" style="flex:none;width:200px;padding:10px 10px 16px;background:#20201d;">
+          <div style="width:40px;height:3px;background:#5a5850;margin:0 auto 8px;"></div>
+          <img src="assets/kaizen-gallery/overview.png" alt="Overview screen" style="width:100%;height:330px;object-fit:cover;object-position:top;display:block;border-radius:2px;">
+          <div style="color:#fbf8f2;font-size:11px;text-align:center;margin-top:8px;">Overview</div>
+        </div>
+
+        <div class="phone-frame" style="flex:none;width:200px;padding:10px 10px 16px;background:#20201d;">
+          <div style="width:40px;height:3px;background:#5a5850;margin:0 auto 8px;"></div>
+          <img src="assets/kaizen-gallery/classes.png" alt="Class log screen" style="width:100%;height:330px;object-fit:cover;object-position:top;display:block;border-radius:2px;">
+          <div style="color:#fbf8f2;font-size:11px;text-align:center;margin-top:8px;">Class Log</div>
+        </div>
+
+        <div class="phone-frame" style="flex:none;width:200px;padding:10px 10px 16px;background:#20201d;">
+          <div style="width:40px;height:3px;background:#5a5850;margin:0 auto 8px;"></div>
+          <img src="assets/kaizen-gallery/rank.png" alt="Rank progress screen" style="width:100%;height:330px;object-fit:cover;object-position:top;display:block;border-radius:2px;">
+          <div style="color:#fbf8f2;font-size:11px;text-align:center;margin-top:8px;">Rank Progress</div>
+        </div>
+
+        <div class="phone-frame" style="flex:none;width:200px;padding:10px 10px 16px;background:#20201d;">
+          <div style="width:40px;height:3px;background:#5a5850;margin:0 auto 8px;"></div>
+          <img src="assets/kaizen-gallery/promotions.png" alt="Promotion record screen" style="width:100%;height:330px;object-fit:cover;object-position:top;display:block;border-radius:2px;">
+          <div style="color:#fbf8f2;font-size:11px;text-align:center;margin-top:8px;">Promotions</div>
+        </div>
+
+        <div class="phone-frame" style="flex:none;width:200px;padding:10px 10px 16px;background:#20201d;">
+          <div style="width:40px;height:3px;background:#5a5850;margin:0 auto 8px;"></div>
+          <img src="assets/kaizen-gallery/techniques.png" alt="Technique checklist screen" style="width:100%;height:330px;object-fit:cover;object-position:top;display:block;border-radius:2px;">
+          <div style="color:#fbf8f2;font-size:11px;text-align:center;margin-top:8px;">Techniques</div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -84,7 +125,7 @@
 
         <div>
           <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:19px;margin:0 0 8px;color:#a8351f;">Monitor Your Rank Progress</h3>
-          <p style="font-size:14px;color:rgba(32,32,29,0.75);margin:0;">From Beginner through Yondan, Kaizen tracks your progress against official USAF test requirements. See exactly how many practice days you've logged and which techniques you still need before your next exam.</p>
+          <p style="font-size:14px;color:rgba(32,32,29,0.75);margin:0;">From Beginner through Yondan, Kaizen tracks your progress against official test requirements. See exactly how many practice days you've logged and which techniques you still need before your next exam.</p>
         </div>
 
         <div>
@@ -99,12 +140,12 @@
 
         <div>
           <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:19px;margin:0 0 8px;color:#a8351f;">Log Your Seminars</h3>
-          <p style="font-size:14px;color:rgba(32,32,29,0.75);margin:0;">Seminars are a key part of USAF advancement. Track every event you attend: instructor, location, duration, and takeaways, all in one place.</p>
+          <p style="font-size:14px;color:rgba(32,32,29,0.75);margin:0;">Seminars are a key part of advancing in rank. Track every event you attend: instructor, location, duration, and takeaways, all in one place.</p>
         </div>
 
         <div>
           <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:19px;margin:0 0 8px;color:#a8351f;">Built-in Glossary</h3>
-          <p style="font-size:14px;color:rgba(32,32,29,0.75);margin:0;">New to the terminology? The full USAF official nomenclature is built right in: 46 terms with clear definitions, searchable and always available, even offline.</p>
+          <p style="font-size:14px;color:rgba(32,32,29,0.75);margin:0;">New to the terminology? The full official aikido nomenclature is built right in: 46 terms with clear definitions, searchable and always available, even offline.</p>
         </div>
 
         <div>
@@ -124,7 +165,7 @@
   <div class="reveal" style="padding:56px 40px;background:#fbf8f2;">
     <div style="max-width:760px;margin:0 auto;text-align:center;">
       <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:22px;margin:0 0 12px;color:#a8351f;">Represent a Different Aikido Organization?</h3>
-      <p style="font-size:14px;color:rgba(32,32,29,0.75);margin:0 0 22px;">Kaizen Aikido Tracker was built around USAF requirements, but the underlying framework adapts well to other federations, styles, and dojos. If your organization is interested in a version tailored to your own curriculum, terminology, or promotion standards, we'd welcome the conversation.</p>
+      <p style="font-size:14px;color:rgba(32,32,29,0.75);margin:0 0 22px;">Kaizen Aikido Tracker was built with a flexible rank and requirements framework that adapts well to different federations, styles, and dojos. If your organization is interested in a version tailored to your own curriculum, terminology, or promotion standards, we'd welcome the conversation.</p>
       <a href="index.html#contact" class="cta-btn" style="font-family:'Fraunces',serif;font-weight:600;font-size:14px;background:#20201d;color:#fbf8f2;padding:12px 26px;display:inline-block;">Contact Us</a>
     </div>
   </div>
@@ -154,6 +195,7 @@
           <a href="kaizen.html" style="color: rgb(168, 53, 31); opacity: 0.9; font-size: 14px;"><b>Kaizen Aikido Tracker</b></a>
           <a href="chameleon.html" style="color: rgb(63, 143, 92); opacity: 0.9; font-size: 14px;"><b>Countdown Chameleon</b></a>
           <a href="waypoints.html" style="color: rgb(44, 95, 102); opacity: 0.9; font-size: 14px;"><b>Waypoints</b></a>
+          <a href="gameday.html" style="color: rgb(31, 66, 135); opacity: 0.9; font-size: 14px;"><b>Gameday Countdown</b></a>
         </div>
       </div>
       <div style="border-top: 1px solid rgba(32,32,29,0.2); padding-top: 20px; font-size: 12px; opacity: 0.6; font-style: normal">© <span id="year">2026</span> Hunter App Studio and On the Hunt for Fun!. Made independently.</div>
