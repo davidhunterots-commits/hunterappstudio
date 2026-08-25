@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Hunter App Studio</title>
+<style>
+  :root{
+    --ink:#1a1d1f;
+    --ink-dim:#5a5f63;
+    --line:#e4e2dd;
+    --bg:#fdfcfa;
+    --card:#ffffff;
+    --accent:#c1511f;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    line-height:1.65;
+  }
+  header{
+    border-bottom:1px solid var(--line);
+    background:var(--card);
+  }
+  nav{
+    max-width:840px;
+    margin:0 auto;
+    padding:18px 24px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    align-items:center;
+    font-size:14px;
+  }
+  nav a{
+    color:var(--ink-dim);
+    text-decoration:none;
+  }
+  nav a:hover{ color:var(--accent); }
+  nav a.brand{
+    color:var(--ink);
+    font-weight:700;
+    font-size:16px;
+    margin-right:auto;
+  }
+  main{
+    max-width:720px;
+    margin:0 auto;
+    padding:56px 24px 80px;
+  }
+  h1{
+    font-size:32px;
+    margin:0 0 6px;
+    letter-spacing:-0.01em;
+  }
+  .effective-date{
+    color:var(--ink-dim);
+    font-size:14px;
+    margin:0 0 40px;
+  }
+  h2{
+    font-size:20px;
+    margin:40px 0 12px;
+    padding-top:8px;
+    border-top:1px solid var(--line);
+  }
+  h1 + .effective-date + h2:first-of-type,
+  section:first-of-type h2{
+    border-top:none;
+    padding-top:0;
+  }
+  p{
+    margin:0 0 16px;
+    color:var(--ink);
+  }
+  ul{
+    margin:0 0 16px;
+    padding-left:22px;
+  }
+  li{
+    margin-bottom:8px;
+  }
+  .lede{
+    font-size:17px;
+    color:var(--ink-dim);
+  }
+  a{ color:var(--accent); }
+  .contact-block{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:20px 24px;
+    margin-top:8px;
+  }
+  .contact-block p{ margin:0; }
+  footer{
+    border-top:1px solid var(--line);
+    padding:32px 24px;
+    text-align:center;
+    color:var(--ink-dim);
+    font-size:13px;
+  }
+  footer a{ color:var(--ink-dim); }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a class="brand" href="index.html">Hunter App Studio</a>
+    <a href="kaizen.html">Kaizen</a>
+    <a href="chameleon.html">Countdown Chameleon</a>
+    <a href="waypoints.html">Waypoints</a>
+    <a href="gameday.html">Gameday Countdown</a>
+    <a href="index.html#contact">Say hi</a>
+  </nav>
+</header>
+
+<main>
+  <h1>Privacy Policy</h1>
+  <p class="effective-date">Effective date: August 25, 2026</p>
+
+  <p class="lede">Hunter App Studio ("we," "us," "our") builds Kaizen Aikido Tracker, Countdown Chameleon, Waypoints, and Gameday Countdown. This page explains what happens to your data when you use them.</p>
+
+  <section>
+    <h2>The short version</h2>
+    <p>None of our apps show ads, use third-party analytics or advertising trackers, sell your data, or require you to create an account with us. Most of what you enter stays on your own device. Where an app is different from that — Waypoints, specifically — it's called out below.</p>
+  </section>
+
+  <section>
+    <h2>What's true for every app</h2>
+    <ul>
+      <li>We don't run ads and don't work with ad networks.</li>
+      <li>We don't use third-party analytics or tracking SDKs.</li>
+      <li>We don't sell or share your data with advertisers or data brokers.</li>
+      <li>We don't require account creation, email, or sign-in to use any of these apps.</li>
+      <li>Support requests sent to us (see Contact, below) are used only to help you, and to improve the apps.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Kaizen Aikido Tracker</h2>
+    <p>Kaizen stores your training log — classes, techniques, promotions — entirely on your own device. Nothing is sent to us or to any third party. If you delete the app, your data goes with it, so back up anything you want to keep.</p>
+  </section>
+
+  <section>
+    <h2>Countdown Chameleon</h2>
+    <p>Countdown Chameleon stores your countdown and theme settings entirely on your own device. The app makes no network connections at all — it works fully offline and shares no data with anyone.</p>
+  </section>
+
+  <section>
+    <h2>Gameday Countdown</h2>
+    <p>Gameday Countdown stores your saved schedules, team selections, and color preferences entirely on your own device.</p>
+    <p>The app makes one outbound connection: a read-only request to a public college football scores endpoint, to show live scores in the app. No information about you or your device is sent as part of that request — it's a one-way pull of publicly available sports data, the same way loading a webpage would be. We don't control that third-party service and aren't responsible for its availability or content.</p>
+  </section>
+
+  <section>
+    <h2>Waypoints</h2>
+    <p>Waypoints is a shared travel list built for two or more people to use together, so it works differently from our other apps.</p>
+    <ul>
+      <li>The places you save, ratings you give, and names you enter for your shared "traveler roster" are stored using Google Firebase (Firestore), so that everyone sharing the list sees the same up-to-date information across their own devices.</li>
+      <li>Because it's a shared list, information you enter — including real names, if you choose to enter them — is visible to whoever else you've shared that list with.</li>
+      <li>Place search is powered by OpenStreetMap's Nominatim service; search terms you type are sent to that service to find matching locations.</li>
+      <li>We don't use this data for advertising, and we don't sell it. It's used solely to make the shared list work.</li>
+    </ul>
+    <p>If you have questions about data you or someone you've shared a list with has entered into Waypoints, contact us using the information below.</p>
+  </section>
+
+  <section>
+    <h2>Children's privacy</h2>
+    <p>Our apps aren't directed at children under 13, and we don't knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, contact us and we'll address it.</p>
+  </section>
+
+  <section>
+    <h2>Changes to this policy</h2>
+    <p>If this policy changes, we'll update the effective date above. Continuing to use the apps after a change means you accept the updated policy.</p>
+  </section>
+
+  <section>
+    <h2>Contact us</h2>
+    <p>Questions about this policy or how any of our apps handle your data:</p>
+    <div class="contact-block">
+      <p><strong>Email:</strong> <a href="mailto:hunterappstudio@gmail.com">hunterappstudio@gmail.com</a></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © 2026 Hunter App Studio and On the Hunt for Fun!. Made independently.
+</footer>
+
+</body>
+</html>
