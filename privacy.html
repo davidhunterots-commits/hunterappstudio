@@ -1,204 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
+<title>Privacy Policy: Hunter App Studio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Privacy Policy — Hunter App Studio</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Libre+Franklin:wght@400;500;600&display=swap">
+
 <style>
-  :root{
-    --ink:#1a1d1f;
-    --ink-dim:#5a5f63;
-    --line:#e4e2dd;
-    --bg:#fdfcfa;
-    --card:#ffffff;
-    --accent:#c1511f;
+  body { margin: 0; }
+  ::selection { background: rgba(138,106,74,0.25); }
+  a { color: #8a6a4a; text-decoration: none; transition: color 0.2s ease; }
+  a:hover { color: #5f4830; }
+
+  .nav-link { position: relative; }
+  .nav-link::after {
+    content: ""; position: absolute; left: 0; bottom: -3px; height: 1px; width: 0;
+    background: currentColor; transition: width 0.25s ease;
   }
-  *{box-sizing:border-box;}
-  body{
-    margin:0;
-    background:var(--bg);
-    color:var(--ink);
-    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-    line-height:1.65;
+  .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+  .nav-link.active::after { height: 2px; box-shadow: 0 0 8px currentColor; }
+
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.in-view { opacity: 1; transform: translateY(0); }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+    .reveal { opacity: 1; transform: none; }
   }
-  header{
-    border-bottom:1px solid var(--line);
-    background:var(--card);
-  }
-  nav{
-    max-width:840px;
-    margin:0 auto;
-    padding:18px 24px;
-    display:flex;
-    flex-wrap:wrap;
-    gap:20px;
-    align-items:center;
-    font-size:14px;
-  }
-  nav a{
-    color:var(--ink-dim);
-    text-decoration:none;
-  }
-  nav a:hover{ color:var(--accent); }
-  nav a.brand{
-    color:var(--ink);
-    font-weight:700;
-    font-size:16px;
-    margin-right:auto;
-  }
-  main{
-    max-width:720px;
-    margin:0 auto;
-    padding:56px 24px 80px;
-  }
-  h1{
-    font-size:32px;
-    margin:0 0 6px;
-    letter-spacing:-0.01em;
-  }
-  .effective-date{
-    color:var(--ink-dim);
-    font-size:14px;
-    margin:0 0 40px;
-  }
-  h2{
-    font-size:20px;
-    margin:40px 0 12px;
-    padding-top:8px;
-    border-top:1px solid var(--line);
-  }
-  h1 + .effective-date + h2:first-of-type,
-  section:first-of-type h2{
-    border-top:none;
-    padding-top:0;
-  }
-  p{
-    margin:0 0 16px;
-    color:var(--ink);
-  }
-  ul{
-    margin:0 0 16px;
-    padding-left:22px;
-  }
-  li{
-    margin-bottom:8px;
-  }
-  .lede{
-    font-size:17px;
-    color:var(--ink-dim);
-  }
-  a{ color:var(--accent); }
-  .contact-block{
-    background:var(--card);
-    border:1px solid var(--line);
-    border-radius:12px;
-    padding:20px 24px;
-    margin-top:8px;
-  }
-  .contact-block p{ margin:0; }
-  footer{
-    border-top:1px solid var(--line);
-    padding:32px 24px;
-    text-align:center;
-    color:var(--ink-dim);
-    font-size:13px;
-  }
-  footer a{ color:var(--ink-dim); }
+
+  .policy h2 { font-family:'Fraunces',serif; font-weight:600; font-size:20px; color:#20201d; margin:40px 0 10px; }
+  .policy p, .policy li { font-size:15px; color:rgba(32,32,29,0.8); line-height:1.7; }
+  .policy ul { margin:0 0 16px; padding-left:22px; }
+  .policy li { margin-bottom:8px; }
 </style>
+
 </head>
 <body>
+<div id="top" style="background:#fbf8f2;color:#20201d;font-family:'Libre Franklin',sans-serif;line-height:1.6;">
 
-<header>
-  <nav>
-    <a class="brand" href="index.html">Hunter App Studio</a>
-    <a href="kaizen.html">Kaizen</a>
-    <a href="chameleon.html">Countdown Chameleon</a>
-    <a href="gameday.html">Gameday Countdown</a>
-    <a href="mod-tally.html">Mod Tally</a>
-    <a href="waypoints.html">Waypoints</a>
-    <a href="index.html#contact">Say hi</a>
-  </nav>
-</header>
+  <div style="position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:24px;padding:18px 40px;background:rgba(251,248,242,0.92);backdrop-filter:blur(6px);border-bottom:1px solid rgba(32,32,29,0.1);flex-wrap:wrap;">
+    <a href="index.html" style="display:flex;align-items:center;gap:10px;margin-right:auto;text-decoration:none;"><span style="width:32px;height:32px;border-radius:50%;background:#20201d;color:#fbf8f2;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-weight:700;font-size:13px;flex:none;">HS</span><span style="font-family:'Fraunces',serif;font-weight:600;font-size:17px;letter-spacing:0.01em;text-transform:uppercase;color:#20201d;">Hunter<span style="color:#8a6a4a;"> App Studio</span></span></a>
+    <a href="kaizen.html" class="nav-link" style="font-size:13px;letter-spacing:0.03em;color:#a8351f;">Kaizen</a>
+    <a href="chameleon.html" class="nav-link" style="font-size:13px;letter-spacing:0.03em;color:#3f8f5c;">Countdown Chameleon</a>
+    <a href="gameday.html" class="nav-link" style="font-size:13px;letter-spacing:0.03em;color:#1f4287;">Gameday Countdown</a>
+    <a href="mod-tally.html" class="nav-link" style="font-size:13px;letter-spacing:0.03em;color:#b8862e;">Mod Tally</a>
+    <a href="waypoints.html" class="nav-link" style="font-size:13px;letter-spacing:0.03em;color:#2c5f66;">Waypoints</a>
+    <a href="index.html#contact" style="font-family:'Fraunces',serif;font-style:italic;font-size:14px;color:#20201d;border-bottom:1px solid #20201d;padding-bottom:2px;">Say hi</a>
+  </div>
 
-<main>
-  <h1>Privacy Policy</h1>
-  <p class="effective-date">Effective date: September 29, 2026</p>
+  <div class="reveal policy" style="padding:64px 40px 90px;">
+    <div style="max-width:760px;margin:0 auto;">
 
-  <p class="lede">Hunter App Studio ("we," "us," "our") builds Kaizen Aikido Tracker, Countdown Chameleon, Gameday Countdown, Mod Tally, and Waypoints. This page explains what happens to your data when you use them.</p>
+      <h1 style="font-family:'Fraunces',serif;font-weight:600;font-size:38px;margin:0 0 6px;color:#20201d;">Privacy Policy</h1>
+      <p style="font-size:14px;color:rgba(32,32,29,0.6);margin:0 0 30px;">Effective date: September 29, 2026</p>
 
-  <section>
-    <h2>The short version</h2>
-    <p>None of our apps show ads, use third-party analytics or advertising trackers, sell your data, or require you to create an account with us. Most of what you enter stays on your own device. Where an app is different from that — Waypoints, specifically — it's called out below.</p>
-  </section>
+      <p style="font-size:16px;color:rgba(32,32,29,0.85);">Hunter App Studio ("we," "us," "our") builds Kaizen Aikido Tracker, Countdown Chameleon, Gameday Countdown, Mod Tally, and Waypoints. This page explains what happens to your data when you use them.</p>
 
-  <section>
-    <h2>What's true for every app</h2>
-    <ul>
-      <li>We don't run ads and don't work with ad networks.</li>
-      <li>We don't use third-party analytics or tracking SDKs.</li>
-      <li>We don't sell or share your data with advertisers or data brokers.</li>
-      <li>We don't require account creation, email, or sign-in to use any of these apps.</li>
-      <li>Support requests sent to us (see Contact, below) are used only to help you, and to improve the apps.</li>
-    </ul>
-  </section>
+      <h2>The short version</h2>
+      <p>None of our apps show ads, use third-party analytics or advertising trackers, sell your data, or require you to create an account with us. Most of what you enter stays on your own device. Where an app is different from that, Waypoints, specifically, it's called out below.</p>
 
-  <section>
-    <h2>Kaizen Aikido Tracker</h2>
-    <p>Kaizen stores your training log — classes, techniques, promotions — entirely on your own device. Nothing is sent to us or to any third party. If you delete the app, your data goes with it, so back up anything you want to keep.</p>
-  </section>
+      <h2>What's true for every app</h2>
+      <ul>
+        <li>We don't run ads and don't work with ad networks.</li>
+        <li>We don't use third-party analytics or tracking SDKs.</li>
+        <li>We don't sell or share your data with advertisers or data brokers.</li>
+        <li>We don't require account creation, email, or sign-in to use any of these apps.</li>
+        <li>Support requests sent to us (see Contact, below) are used only to help you, and to improve the apps.</li>
+      </ul>
 
-  <section>
-    <h2>Countdown Chameleon</h2>
-    <p>Countdown Chameleon stores your countdown and theme settings entirely on your own device. The app makes no network connections at all — it works fully offline and shares no data with anyone.</p>
-  </section>
+      <h2>Kaizen Aikido Tracker</h2>
+      <p>Kaizen stores your training log, classes, techniques, promotions, entirely on your own device. Nothing is sent to us or to any third party. If you delete the app, your data goes with it, so back up anything you want to keep.</p>
 
-  <section>
-    <h2>Gameday Countdown</h2>
-    <p>Gameday Countdown stores your saved schedules, team selections, and color preferences entirely on your own device.</p>
-    <p>The app makes one outbound connection: a read-only request to a public college football scores endpoint, to show live scores in the app. No information about you or your device is sent as part of that request — it's a one-way pull of publicly available sports data, the same way loading a webpage would be. We don't control that third-party service and aren't responsible for its availability or content.</p>
-    <p>If you tap "Add to Calendar," the app asks for permission to add events to your calendar. It uses "Add Events Only" access, which lets it create game entries but not read anything already in your calendar. Nothing about your calendar is sent to us or to anyone else, and you can turn the access off at any time in your iPhone's Settings.</p>
-  </section>
+      <h2>Countdown Chameleon</h2>
+      <p>Countdown Chameleon stores your countdown and theme settings entirely on your own device. The app makes no network connections at all, it works fully offline and shares no data with anyone.</p>
 
-  <section>
-    <h2>Mod Tally</h2>
-    <p>Mod Tally stores your time entries, pay-period settings, and typed signature entirely on your own device. The app makes no network connections — it works fully offline and shares nothing with anyone.</p>
-    <p>When you print a timesheet, save it as a PDF, or export your data as a file, it goes only where you choose to send it. We never receive it. If you delete the app, your data goes with it, so export a backup first if you want to keep it.</p>
-  </section>
+      <h2>Gameday Countdown</h2>
+      <p>Gameday Countdown stores your saved schedules, team selections, and color preferences entirely on your own device.</p>
+      <p>The app makes one outbound connection: a read-only request to a public college football scores endpoint, to show live scores in the app. No information about you or your device is sent as part of that request, it's a one-way pull of publicly available sports data, the same way loading a webpage would be. We don't control that third-party service and aren't responsible for its availability or content.</p>
+      <p>If you tap "Add to Calendar," the app asks for permission to add events to your calendar. It uses "Add Events Only" access, which lets it create game entries but not read anything already in your calendar. Nothing about your calendar is sent to us or to anyone else, and you can turn the access off at any time in your iPhone's Settings.</p>
 
-  <section>
-    <h2>Waypoints</h2>
-    <p>Waypoints is a shared travel list built for two or more people to use together, so it works differently from our other apps.</p>
-    <ul>
-      <li>The places you save, ratings you give, and names you enter for your shared "traveler roster" are stored using Google Firebase (Firestore), so that everyone sharing the list sees the same up-to-date information across their own devices.</li>
-      <li>Because it's a shared list, information you enter — including real names, if you choose to enter them — is visible to whoever else you've shared that list with.</li>
-      <li>Place search is powered by OpenStreetMap's Nominatim service; search terms you type are sent to that service to find matching locations.</li>
-      <li>We don't use this data for advertising, and we don't sell it. It's used solely to make the shared list work.</li>
-    </ul>
-    <p>If you have questions about data you or someone you've shared a list with has entered into Waypoints, contact us using the information below.</p>
-  </section>
+      <h2>Mod Tally</h2>
+      <p>Mod Tally stores your time entries, pay-period settings, and typed signature entirely on your own device. The app makes no network connections, it works fully offline and shares nothing with anyone.</p>
+      <p>When you print a timesheet, save it as a PDF, or export your data as a file, it goes only where you choose to send it. We never receive it. If you delete the app, your data goes with it, so export a backup first if you want to keep it.</p>
 
-  <section>
-    <h2>Children's privacy</h2>
-    <p>Our apps aren't directed at children under 13, and we don't knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, contact us and we'll address it.</p>
-  </section>
+      <h2>Waypoints</h2>
+      <p>Waypoints is a shared travel list built for two or more people to use together, so it works differently from our other apps.</p>
+      <ul>
+        <li>The places you save, ratings you give, and names you enter for your shared "traveler roster" are stored using Google Firebase (Firestore), so that everyone sharing the list sees the same up-to-date information across their own devices.</li>
+        <li>Because it's a shared list, information you enter, including real names, if you choose to enter them, is visible to whoever else you've shared that list with.</li>
+        <li>Place search is powered by OpenStreetMap's Nominatim service; search terms you type are sent to that service to find matching locations.</li>
+        <li>We don't use this data for advertising, and we don't sell it. It's used solely to make the shared list work.</li>
+      </ul>
+      <p>If you have questions about data you or someone you've shared a list with has entered into Waypoints, contact us using the information below.</p>
 
-  <section>
-    <h2>Changes to this policy</h2>
-    <p>If this policy changes, we'll update the effective date above. Continuing to use the apps after a change means you accept the updated policy.</p>
-  </section>
+      <h2>Children's privacy</h2>
+      <p>Our apps aren't directed at children under 13, and we don't knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, contact us and we'll address it.</p>
 
-  <section>
-    <h2>Contact us</h2>
-    <p>Questions about this policy or how any of our apps handle your data:</p>
-    <div class="contact-block">
-      <p><strong>Email:</strong> <a href="mailto:hunterappstudio@gmail.com">hunterappstudio@gmail.com</a></p>
+      <h2>Changes to this policy</h2>
+      <p>If this policy changes, we'll update the effective date above. Continuing to use the apps after a change means you accept the updated policy.</p>
+
+      <h2>Contact us</h2>
+      <p style="margin-bottom:14px;">Questions about this policy or how any of our apps handle your data:</p>
+      <div style="display:inline-block;background:#f3efe6;border-radius:12px;padding:16px 24px;">
+        <a href="mailto:hunterappstudio@gmail.com" style="font-size:15px;font-weight:600;color:#20201d;">hunterappstudio@gmail.com</a>
+      </div>
+
     </div>
-  </section>
-</main>
+  </div>
 
-<footer>
-  © 2026 Hunter App Studio and On the Hunt for Fun!. Made independently.
-</footer>
+  <!-- FOOTER -->
+  <div id="contact" style="scroll-margin-top:80px;background:rgba(128,128,128,0.3);color:#20201d;padding:64px 40px 36px;">
+    <div style="max-width:1180px;margin:0 auto;">
+      <div style="display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;margin-bottom:36px;">
+        <div style="max-width:480px;">
+          <a href="https://youtube.com/@onthehuntforfuntv?si=lvy2_Nqyj2m5m-uP" target="_blank" rel="noopener">
+            <img src="assets/hunt-for-fun-logo-transparent.png" alt="On the Hunt for Fun! logo" style="width: 379px; max-width: 100%; margin-bottom: 14px; height: 140px">
+          </a>
+          <h3 style="font-family: 'Fraunces',serif; font-weight: 600; font-size: 26px; margin: 0 0 12px; color: #c0532e">Apps from On the Hunt for Fun!</h3>
+          <p style="font-size:14px;color:rgba(251,248,242,0.7);margin:0;"><b style="color: #20201D">On the Hunt for Fun! is a travel YouTube channel. These apps grew out of the same restlessness: a training log, a countdown that felt fun to look at, a map I could share with the people I travel with. Happy to hear what you think.</b></p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 9px;">
+          <a href="mailto:hunterappstudio@gmail.com" style="color: #20201d; font-size: 14px;"><b>Contact us: hunterappstudio@gmail.com</b></a>
+          <a href="https://youtube.com/@onthehuntforfuntv?si=lvy2_Nqyj2m5m-uP" target="_blank" rel="noopener" style="color: #20201d; font-size: 14px;"><b>YouTube: @onthehuntforfuntv</b></a>
+          <a href="kaizen.html" style="color: rgb(168, 53, 31); opacity: 0.9; font-size: 14px;"><b>Kaizen Aikido Tracker</b></a>
+          <a href="chameleon.html" style="color: rgb(63, 143, 92); opacity: 0.9; font-size: 14px;"><b>Countdown Chameleon</b></a>
+          <a href="gameday.html" style="color: rgb(31, 66, 135); opacity: 0.9; font-size: 14px;"><b>Gameday Countdown</b></a>
+          <a href="mod-tally.html" style="color: rgb(184, 134, 46); opacity: 0.9; font-size: 14px;"><b>Mod Tally</b></a>
+          <a href="waypoints.html" style="color: rgb(44, 95, 102); opacity: 0.9; font-size: 14px;"><b>Waypoints</b></a>
+          <a href="privacy.html" style="color: #20201d; opacity: 0.7; font-size: 14px;"><b>Privacy</b></a>
+        </div>
+      </div>
+      <div style="border-top: 1px solid rgba(32,32,29,0.2); padding-top: 20px; font-size: 12px; opacity: 0.6; font-style: normal">© <span id="year">2026</span> Hunter App Studio and On the Hunt for Fun!. Made independently.</div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  var yearEl = document.getElementById('year');
+  if (yearEl) { yearEl.textContent = new Date().getFullYear(); }
+
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && revealEls.length) {
+    var revealObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(function(el) { revealObserver.observe(el); });
+  } else {
+    revealEls.forEach(function(el) { el.classList.add('in-view'); });
+  }
+</script>
 
 </body>
 </html>
