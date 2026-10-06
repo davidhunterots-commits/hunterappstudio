@@ -1,0 +1,17 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "39Y58A9272.com.hunterappstudio.waypoints"
+        ],
+        "components": [
+          {
+            "/": "/waypoints-share.html",
+            "comment": "Places shared from Waypoints open in the app"
+          }
+        ]
+      }
+    ]
+  }
+}
