@@ -137,6 +137,14 @@ function parseShareUrl(urlString){
   }
 }
 
+function fullAddress(address, city){
+  const a = String(address || '').trim(), c = String(city || '').trim();
+  if(!a) return c;
+  if(!c) return a;
+  const cityWord = new RegExp('(^|[^\\p{L}\\p{N}])' + c.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '($|[^\\p{L}\\p{N}])', 'iu');
+  return cityWord.test(a) ? a : a + ', ' + c;
+}
+
 // ---- Showing it (text only; nothing from the link is ever treated as markup) ------
 function el(tag, cls, text){
   const n = document.createElement(tag);
@@ -161,7 +169,7 @@ function render(){
   body.appendChild(pills);
 
   if(p.from) body.appendChild(el('div', 'line', '🙋 Recommended by ' + p.from));
-  const where = [p.address, p.city].filter(Boolean).join(', ');
+  const where = fullAddress(p.address, p.city);
   if(where) body.appendChild(el('div', 'line', '📍 ' + where));
   if(p.phone) body.appendChild(el('div', 'line', '📞 ' + p.phone));
   if(p.website){
