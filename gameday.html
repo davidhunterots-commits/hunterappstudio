@@ -96,13 +96,13 @@
 
         <div class="phone-frame" style="flex:none;width:200px;padding:10px 10px 16px;background:#20201d;">
           <div style="width:40px;height:3px;background:#5a5850;margin:0 auto 8px;"></div>
-          <img src="assets/gameday-gallery/switcher.png" alt="Schedule switcher screen" style="width:100%;height:330px;object-fit:cover;object-position:top;display:block;border-radius:2px;">
-          <div style="color:#fbf8f2;font-size:11px;text-align:center;margin-top:8px;">Switch Teams</div>
+          <img src="assets/gameday-gallery/schedule.png" alt="Schedule tab with the favorite star, Add to Calendar, and Load 2026 Schedule" style="width:100%;height:330px;object-fit:cover;object-position:top;display:block;border-radius:2px;">
+          <div style="color:#fbf8f2;font-size:11px;text-align:center;margin-top:8px;">Schedule</div>
         </div>
 
         <div class="phone-frame" style="flex:none;width:200px;padding:10px 10px 16px;background:#20201d;">
           <div style="width:40px;height:3px;background:#5a5850;margin:0 auto 8px;"></div>
-          <img src="assets/gameday-gallery/calendar.png" alt="Season calendar screen" style="width:100%;height:330px;object-fit:cover;object-position:top;display:block;border-radius:2px;">
+          <video autoplay muted loop playsinline preload="metadata" poster="assets/gameday-gallery/calendar-demo.jpg" aria-label="Season calendar tab showing a month of games, tapping a day to see its games" style="width:100%;height:330px;object-fit:cover;object-position:top;display:block;border-radius:2px;"><source src="assets/gameday-gallery/calendar-demo.mp4" type="video/mp4"></video>
           <div style="color:#fbf8f2;font-size:11px;text-align:center;margin-top:8px;">Season Calendar</div>
         </div>
 
@@ -369,6 +369,13 @@
 </div>
 
 <script>
+  document.querySelectorAll('video').forEach(function(v) {
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      v.removeAttribute('autoplay');
+      v.pause();
+    }
+  });
+
   var yearEl = document.getElementById('year');
   if (yearEl) { yearEl.textContent = new Date().getFullYear(); }
 
