@@ -36,20 +36,33 @@
     * { transition: none !important; }
     .reveal { opacity: 1; transform: none; }
   }
+
+  .navicon { display: flex; flex-direction: column; align-items: center; gap: 4px; text-decoration: none; }
+  .navicon img { width: 32px; height: 32px; border-radius: 8px; display: block; object-fit: cover; transition: transform 0.2s ease; }
+  .navicon:hover img { transform: translateY(-2px); }
+  .navicon.active img { box-shadow: 0 0 0 2px #f3efe6, 0 0 12px rgba(255,255,255,0.55); }
+  .navicon-label { font-size: 10px; letter-spacing: 0.03em; color: #f3efe6; line-height: 1; }
+  @media (max-width: 720px) {
+    .navicon-label { display: none; }
+    .navicon img { width: 30px; height: 30px; }
+    .sitenav { padding: 12px 14px !important; gap: 10px !important; }
+  }
+  @media (max-width: 520px) { .brandtext { display: none; } }
 </style>
 
 </head>
 <body>
 <div id="top" style="background:#fbf8f2;color:#20201d;font-family:'Libre Franklin',sans-serif;line-height:1.6;">
 
-  <div style="position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:24px;padding:18px 40px;background:linear-gradient(180deg, rgba(44,95,102,0.07), rgba(251,248,242,0.92) 65%);backdrop-filter:blur(6px);border-bottom:1px solid rgba(44,95,102,0.22);box-shadow:0 2px 16px -6px rgba(44,95,102,0.35);flex-wrap:wrap;">
-    <a href="index.html" style="display:flex;align-items:center;gap:10px;margin-right:auto;text-decoration:none;"><span style="width:32px;height:32px;border-radius:50%;background:#20201d;color:#fbf8f2;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-weight:700;font-size:13px;flex:none;">HS</span><span style="font-family:'Fraunces',serif;font-weight:600;font-size:17px;letter-spacing:0.01em;text-transform:uppercase;color:#20201d;">Hunter<span style="color:#8a6a4a;"> App Studio</span></span></a>
-    <a href="kaizen.html" class="nav-link" style="font-size:13px;letter-spacing:0.03em;color:#a8351f;">Kaizen</a>
-    <a href="chameleon.html" class="nav-link" style="font-size:13px;letter-spacing:0.03em;color:#3f8f5c;">Countdown Chameleon</a>
-    <a href="gameday.html" class="nav-link" style="font-size:13px;letter-spacing:0.03em;color:#1f4287;">Gameday Countdown</a>
-    <a href="mod-tally.html" class="nav-link" style="font-size:13px;letter-spacing:0.03em;color:#b8862e;">Mod Tally</a>
-    <a href="waypoints.html" class="nav-link active" style="font-size:13px;letter-spacing:0.03em;color:#2c5f66;">Waypoints</a>
-    <a href="index.html#contact" style="font-family:'Fraunces',serif;font-style:italic;font-size:14px;color:#20201d;border-bottom:1px solid #20201d;padding-bottom:2px;">Say hi</a>
+  <div class="sitenav" style="position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:24px;padding:18px 40px;background:#5f6f2e;backdrop-filter:blur(6px);border-bottom:1px solid rgba(0,0,0,0.18);box-shadow:0 2px 14px -6px rgba(32,32,29,0.45);flex-wrap:wrap;">
+    <a href="index.html" style="display:flex;align-items:center;gap:10px;margin-right:auto;text-decoration:none;"><span style="width:32px;height:32px;border-radius:50%;background:#fbf8f2;color:#4e5a26;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-weight:700;font-size:13px;flex:none;">HS</span><span class="brandtext" style="font-family:'Fraunces',serif;font-weight:600;font-size:17px;letter-spacing:0.01em;text-transform:uppercase;color:#fbf8f2;">Hunter<span style="color:#e6dcb8;"> App Studio</span></span></a>
+    <a href="kaizen.html" class="nav-link navicon" title="Kaizen Aikido Tracker" aria-label="Kaizen Aikido Tracker"><img src="assets/nav-icons/kaizen.png" width="32" height="32" alt=""><span class="navicon-label">Kaizen</span></a>
+    <a href="chameleon.html" class="nav-link navicon" title="Countdown Chameleon" aria-label="Countdown Chameleon"><img src="assets/nav-icons/chameleon.png" width="32" height="32" alt=""><span class="navicon-label">Chameleon</span></a>
+    <a href="gameday.html" class="nav-link navicon" title="Gameday Countdown" aria-label="Gameday Countdown"><img src="assets/nav-icons/gameday.png" width="32" height="32" alt=""><span class="navicon-label">Gameday</span></a>
+    <a href="courtside.html" class="nav-link navicon" title="Courtside Countdown" aria-label="Courtside Countdown"><img src="assets/nav-icons/courtside.png" width="32" height="32" alt=""><span class="navicon-label">Courtside</span></a>
+    <a href="mod-tally.html" class="nav-link navicon" title="Mod Tally" aria-label="Mod Tally"><img src="assets/nav-icons/mod-tally.png" width="32" height="32" alt=""><span class="navicon-label">Mod Tally</span></a>
+    <a href="waypoints.html" class="nav-link navicon active" title="Waypoints" aria-label="Waypoints"><img src="assets/nav-icons/waypoints.png" width="32" height="32" alt=""><span class="navicon-label">Waypoints</span></a>
+    <a href="index.html#contact" style="font-family:'Fraunces',serif;font-style:italic;font-size:14px;color:#fbf8f2;border-bottom:1px solid #fbf8f2;padding-bottom:2px;">Say hi</a>
   </div>
 
 
@@ -216,6 +229,7 @@
           <a href="kaizen.html" style="color: rgb(168, 53, 31); opacity: 0.9; font-size: 14px;"><b>Kaizen Aikido Tracker</b></a>
           <a href="chameleon.html" style="color: rgb(63, 143, 92); opacity: 0.9; font-size: 14px;"><b>Countdown Chameleon</b></a>
           <a href="gameday.html" style="color: rgb(31, 66, 135); opacity: 0.9; font-size: 14px;"><b>Gameday Countdown</b></a>
+          <a href="courtside.html" style="color: rgb(204, 95, 10); opacity: 0.9; font-size: 14px;"><b>Courtside Countdown</b></a>
           <a href="mod-tally.html" style="color: rgb(184, 134, 46); opacity: 0.9; font-size: 14px;"><b>Mod Tally</b></a>
           <a href="waypoints.html" style="color: rgb(44, 95, 102); opacity: 0.9; font-size: 14px;"><b>Waypoints</b></a>
           <a href="privacy.html" style="color: #20201d; opacity: 0.7; font-size: 14px;"><b>Privacy</b></a>
