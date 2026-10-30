@@ -47,7 +47,7 @@
     .navicon img { width: 30px; height: 30px; }
     .sitenav { padding: 12px 14px !important; gap: 10px !important; }
   }
-  @media (max-width: 520px) { .brandtext { display: none; } }
+  @media (max-width: 520px) { .brand-full { display: none !important; } .brand-mark { display: block !important; } }
 </style>
 
 </head>
@@ -55,7 +55,7 @@
 <div id="top" style="background:#fbf8f2;color:#20201d;font-family:'Libre Franklin',sans-serif;line-height:1.6;">
 
   <div class="sitenav" style="position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:24px;padding:18px 40px;background:#5f6f2e;backdrop-filter:blur(6px);border-bottom:1px solid rgba(0,0,0,0.18);box-shadow:0 2px 14px -6px rgba(32,32,29,0.45);flex-wrap:wrap;">
-    <a href="index.html" style="display:flex;align-items:center;gap:10px;margin-right:auto;text-decoration:none;"><span style="width:32px;height:32px;border-radius:50%;background:#fbf8f2;color:#4e5a26;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-weight:700;font-size:13px;flex:none;">HS</span><span class="brandtext" style="font-family:'Fraunces',serif;font-weight:600;font-size:17px;letter-spacing:0.01em;text-transform:uppercase;color:#fbf8f2;">Hunter<span style="color:#e6dcb8;"> App Studio</span></span></a>
+    <a href="index.html" aria-label="Hunter App Studio home" style="display:flex;align-items:center;margin-right:auto;text-decoration:none;"><img class="brand-full" src="assets/logo-nav.png" alt="Hunter App Studio" width="126" height="44" style="height:44px;width:auto;display:block;"><img class="brand-mark" src="assets/logo-nav-mark.png" alt="Hunter App Studio" width="24" height="40" style="height:40px;width:auto;display:none;"></a>
     <a href="kaizen.html" class="nav-link navicon" title="Kaizen Aikido Tracker" aria-label="Kaizen Aikido Tracker"><img src="assets/nav-icons/kaizen.png" width="32" height="32" alt=""><span class="navicon-label">Kaizen</span></a>
     <a href="chameleon.html" class="nav-link navicon active" title="Countdown Chameleon" aria-label="Countdown Chameleon"><img src="assets/nav-icons/chameleon.png" width="32" height="32" alt=""><span class="navicon-label">Chameleon</span></a>
     <a href="gameday.html" class="nav-link navicon" title="Gameday Countdown" aria-label="Gameday Countdown"><img src="assets/nav-icons/gameday.png" width="32" height="32" alt=""><span class="navicon-label">Gameday</span></a>
